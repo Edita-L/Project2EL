@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
     <link rel="reset" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -24,48 +21,139 @@
         <h3 class='heading text-center'> Fun Game for Beginners En Espanol</h3>
     </div>
 
+    <h2 class="quizHeader text-center"> Are you ready to begin? Take our Quiz!</h2>
+    <table style="width:583px">
+        <tr>
+            <td>
+                <div>
+                    <p class="question">Question #1: How to say CAT in Spanish?:</p>
+                    <ul>
+                        <input class="answer" type="radio" name="q1" value="1">
+                        <label id="correctString1">Gato</label>
+                        <br>
+                        <input class="answer" type="radio" name="q1" value="0">
+                        <label>Cato</label>
+                        <br>
+                        <input class="answer" type="radio" name="q1" value="0">
+                        <label>Bato</label>
+                        <br>
+                        <input class="answer" type="radio" name="q1" value="0">
+                        <label>Meato</label>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <p class="question">Question #2 How to say HOUSE in Spanish:</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q2" value="0">
+                        <label>Hasa</label>
+                        <br>
+                        <input class="answer" type="radio" name="q2" value="1">
+                        <label id="correctString2">Casa</label>
+                        <br>
+                        <input class="answer" type="radio" name="q2" value="0">
+                        <label>Vila</label>
+                        <br>
+                        <input class="answer" type="radio" name="q2" value="0">
+                        <label>Doma</label>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <p class="question">Question #3: How to say CLOUD in Spanish?:</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q3" value="0">
+                        <label>Bube</label>
+                        <br>
+                        <input class="answer" type="radio" name="q3" value="1">
+                        <label id="correctString3">Nube</label>
+                        <br>
+                        <input class="answer" type="radio" name="q3" value="0">
+                        <label>Dube</label>
+                        <br>
+                        <input class="answer" type="radio" name="q3" value="0">
+                        <label>Rube</label>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <p class="question">Question #4: How to say SISTER in Spanish?:</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q4" value="0">
+                        <label>Hermano</label>
+                        <br>
+                        <input class="answer" type="radio" name="q4" value="1">
+                        <label id="correctString4">Hermana</label>
+                        <br>
+                        <input class="answer" type="radio" name="q4" value="0">
+                        <label>Harmana</label>
+                        <br>
+                        <input class="answer" type="radio" name="q4" value="0">
+                        <label>Harmano</label>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <p class="question">Question #5: How to say TABLE in Spanish?:</p>
+
+                    <ul>
+                        <input class="answer" type="radio" name="q5" value="0">
+                        <label>Nesa</label>
+                        <br>
+                        <input class="answer" type="radio" name="q5" value="1">
+                        <label id="correctString5">Mesa</label>
+                        <br>
+                        <input class="answer" type="radio" name="q5" value="0">
+                        <label>Lesa</label>
+                        <br>
+                        <input class="answer" type="radio" name="q5" value="0">
+                        <label>Besa</label>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br />
+
+    <div class="submitter text-center">
+        <input class="quizSubmit" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit" />
+    </div>
+
+    <!--show only wrong answers on submit-->
     <div class="text-center">
-        <h2>Are you ready to begin?</h2>
-        <ol>
-            <li class="questions" id="question1">Question 1
-                <hr>
-                <ul class="answer-options">
-                      <li><input type="radio" id="question1-ans1" name="q1answer" ></li>
-                      <label id="qa1" for="question1-ans1"></label>
-                        
-                      <li><input type="radio" id="question1-ans2" name="q2answer" ></li>
-                      <label id="qa2" for="question1-ans2"></label>
-
-                      <li><input type="radio" id="question1-ans3" name="q1answer" ></li>
-                      <label id="qa3" for="question1-ans3"></label>
-
-                      <li><button class="btn-info">Next</button></li>
-                </ul>
-            </li>
-            <li class="questions" id="question2">Question 2
-
-            </li>
-            <li class="questions" id="question3"> Question 3
-
-            </li>
-
-
-
-
-
-        </ol>
+        <div class="quizAnswers" id="correctAnswer1"></div>
+        <div class="quizAnswers" id="correctAnswer2"></div>
+        <div class="quizAnswers" id="correctAnswer3"></div>
+        <div class="quizAnswers" id="correctAnswer4"></div>
+        <div class="quizAnswers" id="correctAnswer5"></div>
+        <!--show score upon submit-->
+        <div>
+            <h2 class="quizScore" id="userScore"></h2>
+        </div>
 
     </div>
-    <div class="text-center">Score Area
-        <p>Correct Answers</p>
-        <p>Incorrect Answers</p>
-    </div>
 
+    </div>
     <footer>
         <div class=" text-center main-footer">
             <ul class="contact">
                 <li>Get in Touch:</li>
-                <li>email <a href="mailto:info@testyourspanish.com">info@testyourspanish.com </a></li>
+                <li>email <a href="mailto:info@tyspanish.com">info@tyspanish.com </a></li>
             </ul>
         </div>
 
