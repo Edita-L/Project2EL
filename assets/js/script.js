@@ -1,4 +1,4 @@
-
+//do i need on document load function to include all below?//
 function submitQuiz() {
   console.log('submitted');
 
@@ -25,12 +25,12 @@ function submitQuiz() {
 
 // function to return correct answer string
   function correctAnswer (correctStringNo, qNumber) {
-    console.log("qNumber: " + qNumber);  // logs 1,2,3,4 after called below
+    console.log("qNumber: " + qNumber);  // logs 1,2,3,4,5 after called below.**why do we need: &nbsp;**
     return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
       (document.getElementById(correctStringNo).innerHTML) + "</strong>");
     }
 
-// print correct answers only if wrong (calls correctAnswer function)
+// print correct answers only if wrong (calls correctAnswer function). **why is there a number after correctString
   if (answerScore('q1') === 0) {
     document.getElementById('correctAnswer1').innerHTML = correctAnswer('correctString1', 1);
   }
@@ -57,13 +57,16 @@ function submitQuiz() {
 
 // show score as "score/possible score"
   var showScore = "Your Score: " + calcScore +"/" + questionCounter;
-// if 4/4, "perfect score!"
+// if 5/5, "perfect score!"
   if (calcScore === questionCounter) {
     showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
   };
   document.getElementById('userScore').innerHTML = showScore;
 }
 
+
+//what is below about..shows Uncaught ReferenceError: $ is not defined    at script.js for document (in developer tools)
+ 
 $(document).ready(function() {
 
 $('#submitButton').click(function() {
@@ -72,7 +75,7 @@ $('#submitButton').click(function() {
 
 });
 
-// 1. load when page loads, gets question 0
+// *--------------------------------1. load when page loads, gets question 0
 /*window.addEventListener("load", function () {
 
     /*var question = document.getElementById("question1");
