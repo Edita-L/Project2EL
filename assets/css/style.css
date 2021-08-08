@@ -1,29 +1,47 @@
-body {
-    background-color:darkkhaki;
-    color: darkslategrey;
-}
+body {}
 
 .flag {
-    width: 10%;
-    height:5%;
-  }
-  .jumbotron, .main-footer {
-    background-color: goldenrod;
-    
-  }
-  .main-footer a {
-    text-decoration: none;
-    color:darkslategrey;
-    
-}
-.main-footer a:hover{
-  color:mediumblue;
+  width: 10%;
+  height: 5%;
 }
 
- .contact, .questions, .answer-options {
-    list-style: none;
- }
+.heading,
+.main-footer {
+  background-color: coral;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding:10px 0
+}
 
- table {
-   margin: 0 auto;
- }
+.jumbotron {
+  background-color: goldenrod;
+  color: darkslategrey;
+  padding: 0 10px;
+
+
+}
+
+.main-footer a {
+  text-decoration: none;
+  color: darkslategrey;
+
+}
+
+.main-footer a:hover {
+  color: mediumblue;
+}
+
+.contact,
+.question {
+  list-style: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+table {
+  margin: 0 auto;
+}
+
+.hide {
+  display: none;
+}

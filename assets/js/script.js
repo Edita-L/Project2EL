@@ -16,6 +16,13 @@ function submitQuiz() {
     if (isNaN(answerValue)) {
       answerValue = 0;
     }
+     
+    //** add hide ??
+    /*document.querySelectorAll('.question').forEach(x => x.classList.add('hide'));
+    document.querySelectorAll('.answer').forEach(x => x.classList.add('hide'));
+    document.querySelectorAll('label').forEach(x => x.classList.add('hide'));
+    return answerValue; */
+
     return answerValue;
   }
 
@@ -69,9 +76,9 @@ function submitQuiz() {
  
 $(document).ready(function() {
 
-$('#submitButton').click(function() {
-  $(this).addClass('hide');
-});
+/*$('#submitButton').click(function() {
+  $('.question').hide();
+}); */
 
 });
 
