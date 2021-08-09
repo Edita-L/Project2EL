@@ -56,6 +56,10 @@ body {}
   font-weight: bold;
 }
 
+li {
+  list-style:none;
+}
+
 table {
   margin: 0 auto;
 }
