@@ -6,12 +6,28 @@ body {}
 }
 
 .heading,
-.main-footer {
+.main-footer{
   background-color: coral;
   font-size: 1.5rem;
   font-weight: bold;
   padding:10px 0
 }
+
+#submitButton {
+  border-radius: 3px;
+  background-color: coral;
+  font-size: 1rem;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  color: darkslategrey;
+}
+#submitButton:hover {
+  color: indigo;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color:lightseagreen;
+}
+
 
 .jumbotron {
   background-color: goldenrod;
@@ -29,6 +45,8 @@ body {}
 
 .main-footer a:hover {
   color: mediumblue;
+  background-color:lightseagreen;
+ 
 }
 
 .contact,

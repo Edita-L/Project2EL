@@ -27,17 +27,17 @@ function submitQuiz() {
   }
 
 // calc score with answerScore function
-  var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4')+ answerScore('q5'));
-  console.log("CalcScore: " + calcScore); // it works!
+  var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4')+ answerScore('q5')+ answerScore('q6'));
+  console.log("CalcScore: " + calcScore);
 
 // function to return correct answer string
   function correctAnswer (correctStringNo, qNumber) {
-    console.log("qNumber: " + qNumber);  // logs 1,2,3,4,5 after called below.**why do we need: &nbsp;**
+    console.log("qNumber: " + qNumber);  // logs 1,2,3,4,5,6 after called below.**why do we need: &nbsp;**
     return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
       (document.getElementById(correctStringNo).innerHTML) + "</strong>");
     }
 
-// print correct answers only if wrong (calls correctAnswer function). **why is there a number after correctString
+// print correct answers only if wrong (calls correctAnswer function)
   if (answerScore('q1') === 0) {
     document.getElementById('correctAnswer1').innerHTML = correctAnswer('correctString1', 1);
   }
@@ -53,8 +53,11 @@ function submitQuiz() {
   if (answerScore('q5') === 0) {
     document.getElementById('correctAnswer5').innerHTML = correctAnswer('correctString5', 5);
   }
+  if (answerScore('q6') === 0) {
+    document.getElementById('correctAnswer6').innerHTML = correctAnswer('correctString6', 6);
+  }
 
-// calculate "possible score" integer
+// calculate total possible score
   var questionCountArray = document.getElementsByClassName('question');
 
   var questionCounter = 0;
@@ -62,12 +65,22 @@ function submitQuiz() {
     questionCounter++;
   }
 
-// show score as "score/possible score"
+// show score as score/out of possible score
   var showScore = "Your Score: " + calcScore +"/" + questionCounter;
-// if 5/5, "perfect score!"
+// for full score
   if (calcScore === questionCounter) {
-    showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
+    showScore = showScore + "&nbsp; <strong>Amazing - You Got a Perfect Score!</strong>"
   };
+// for lesser scores
+  if (calcScore >= 4 && calcScore < 6) {
+    showScore = showScore + "&nbsp; <strong> Nearly There, Just a Tiny Bit More of Practice Needed :) </strong>"
+  };
+  
+  if (calcScore <=3) {
+    showScore = showScore + "&nbsp; <strong> Nice Try, But There Is Room For Improvment.. </strong>"
+  };
+
+
   document.getElementById('userScore').innerHTML = showScore;
 }
 
