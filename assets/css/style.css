@@ -28,6 +28,22 @@ body {}
   background-color:lightseagreen;
 }
 
+#reload {
+  border-radius: 3px;
+  background-color: darkslategray;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  color: coral;
+}
+
+#reload:hover {
+  color: indigo;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color:lightseagreen;
+}
+
 
 .jumbotron {
   background-color: goldenrod;
