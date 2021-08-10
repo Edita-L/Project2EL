@@ -64,7 +64,9 @@ body {}
   background-color:lightseagreen;
  
 }
-
+.contact{
+  padding: 0;
+}
 .contact,
 .question {
   list-style: none;

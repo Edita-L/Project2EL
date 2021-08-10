@@ -36,7 +36,7 @@ function submitQuiz() {
     return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
       (document.getElementById(correctStringNo).innerHTML) + "</strong>");
     }
-
+  
 // print correct answers only if wrong (calls correctAnswer function)
   if (answerScore('q1') === 0) {
     document.getElementById('correctAnswer1').innerHTML = correctAnswer('correctString1', 1);
@@ -69,7 +69,7 @@ function submitQuiz() {
   var showScore = "Your Score: " + calcScore +"/" + questionCounter;
 // for full score
   if (calcScore === questionCounter) {
-    showScore = showScore + "&nbsp; <strong>Amazing - You Got a Perfect Score!</strong>"
+    showScore = showScore + "&nbsp; <strong>Amazing - You Got a Perfect Score!</strong>";
   };
 // for lesser scores
   if (calcScore >= 4 && calcScore < 6) {
@@ -77,8 +77,8 @@ function submitQuiz() {
   };
   
   if (calcScore <=3) {
-    showScore = showScore + "&nbsp; <strong> Nice Try, But There Is Room For Improvment.. </strong>"
-  };
+    showScore = showScore + "&nbsp; <strong> Nice Try, But There Is Room For Improvment.. </strong>";
+  }
 
 
   document.getElementById('userScore').innerHTML = showScore;
@@ -88,12 +88,11 @@ function submitQuiz() {
 //what is below about..shows Uncaught ReferenceError: $ is not defined    at script.js for document (in developer tools)
  
 $(document).ready(function() {
-
-/*$('#submitButton').click(function() {
-  $('.question').hide();
-}); */
-
+  $('#submitButton').click(function() {
+		$(this).addClass('hide');
+	});
 });
+
 
 // *--------------------------------1. load when page loads, gets question 0
 /*window.addEventListener("load", function () {
