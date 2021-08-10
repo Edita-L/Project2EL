@@ -1,16 +1,41 @@
 body {}
 
 .flag {
-  width: 10%;
-  height: 5%;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1300px;
+  background: url('../images/new-hola1.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 30px 50px;
+
+}
+
+.heading {
+  opacity: 0.9;
+  color: rgb(27, 51, 51);
+
 }
 
 .heading,
-.main-footer{
+.main-footer {
   background-color: coral;
   font-size: 1.5rem;
   font-weight: bold;
-  padding:10px 0
+  padding: 10px 0;
+
+}
+
+
+@media screen and (max-width: 360px) {
+  .flag {
+    padding: 0;
+  }
+  .heading {
+   opacity:0.8;
+  }
+  .heading > p {
+    font-size: 1rem;
+  }
 }
 
 label {
@@ -26,11 +51,12 @@ label {
   margin-bottom: 30px;
   color: darkslategrey;
 }
+
 #submitButton:hover {
   color: indigo;
   font-weight: bold;
   font-size: 1.5rem;
-  background-color:transparent;
+  background-color: transparent;
 }
 
 #reload {
@@ -46,19 +72,19 @@ label {
   color: indigo;
   font-weight: bold;
   font-size: 1.5rem;
-  background-color:lightseagreen;
+  background-color: lightseagreen;
 }
 
 #scores-area {
   background-color: darkslategray;
   color: coral;
-  padding:10px;
-  }
+  padding: 10px;
+}
 
-  #userScore {
-    font-size: 1.3rem;
-    font-weight: bold;
-  }
+#userScore {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
 
 .jumbotron {
   background-color: goldenrod;
@@ -76,12 +102,14 @@ label {
 
 .main-footer a:hover {
   color: mediumblue;
-  background-color:lightseagreen;
- 
+  background-color: lightseagreen;
+
 }
-.contact{
+
+.contact {
   padding: 0;
 }
+
 .contact,
 .question {
   list-style: none;
@@ -90,7 +118,7 @@ label {
 }
 
 li {
-  list-style:none;
+  list-style: none;
 }
 
 table {
