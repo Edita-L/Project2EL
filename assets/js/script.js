@@ -1,43 +1,35 @@
-//do i need on document load function to include all below?//
 function submitQuiz() {
   console.log('submitted');
 
-// get each answer score
-  function answerScore (qName) {
+  // get score for each answer 
+  function answerScore(qName) {
     var radiosNo = document.getElementsByName(qName);
 
     for (var i = 0, length = radiosNo.length; i < length; i++) {
-         if (radiosNo[i].checked) {
-    // do something with radiosNo
+      if (radiosNo[i].checked) {
         var answerValue = Number(radiosNo[i].value);
       }
     }
-    // change NaNs to zero
+    // change not clicked answers to zero
     if (isNaN(answerValue)) {
       answerValue = 0;
     }
-     
-    //** add hide ??
-    /*document.querySelectorAll('.question').forEach(x => x.classList.add('hide'));
-    document.querySelectorAll('.answer').forEach(x => x.classList.add('hide'));
-    document.querySelectorAll('label').forEach(x => x.classList.add('hide'));
-    return answerValue; */
 
     return answerValue;
   }
 
-// calc score with answerScore function
-  var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4')+ answerScore('q5')+ answerScore('q6'));
+  // calc score with answerScore function
+  var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4') + answerScore('q5') + answerScore('q6') + answerScore('q7') + answerScore('q8') + answerScore('q9') + answerScore('q10'));
   console.log("CalcScore: " + calcScore);
 
-// function to return correct answer string
-  function correctAnswer (correctStringNo, qNumber) {
-    console.log("qNumber: " + qNumber);  // logs 1,2,3,4,5,6 after called below.**why do we need: &nbsp;**
+  // return correct answer string
+  function correctAnswer(correctStringNo, qNumber) {
+    console.log("qNumber: " + qNumber);
     return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
       (document.getElementById(correctStringNo).innerHTML) + "</strong>");
-    }
-  
-// print correct answers only if wrong (calls correctAnswer function)
+  }
+
+  // print correct answers only if wrong (calls correctAnswer function)
   if (answerScore('q1') === 0) {
     document.getElementById('correctAnswer1').innerHTML = correctAnswer('correctString1', 1);
   }
@@ -57,7 +49,21 @@ function submitQuiz() {
     document.getElementById('correctAnswer6').innerHTML = correctAnswer('correctString6', 6);
   }
 
-// calculate total possible score
+  if (answerScore('q7') === 0) {
+    document.getElementById('correctAnswer7').innerHTML = correctAnswer('correctString7', 7);
+  }
+  if (answerScore('q8') === 0) {
+    document.getElementById('correctAnswer8').innerHTML = correctAnswer('correctString8', 8);
+  }
+  if (answerScore('q9') === 0) {
+    document.getElementById('correctAnswer9').innerHTML = correctAnswer('correctString9', 9);
+  }
+  if (answerScore('q10') === 0) {
+    document.getElementById('correctAnswer10').innerHTML = correctAnswer('correctString10', 10);
+  }
+
+
+  // calculate total possible score
   var questionCountArray = document.getElementsByClassName('question');
 
   var questionCounter = 0;
@@ -65,48 +71,31 @@ function submitQuiz() {
     questionCounter++;
   }
 
-// show score as score/out of possible score
-  var showScore = "Your Score: " + calcScore +"/" + questionCounter;
-// for full score
+  // show score as score/out of possible score
+  var showScore = "Your Score: " + calcScore + "/" + questionCounter;
+  
+  // message for full score
   if (calcScore === questionCounter) {
     showScore = showScore + "&nbsp; <strong>Amazing - You Got a Perfect Score!</strong>";
   };
-// for lesser scores
-  if (calcScore >= 4 && calcScore < 6) {
-    showScore = showScore + "&nbsp; <strong> Nearly There, Just a Tiny Bit More of Practice Needed :) </strong>"
+  // messages for lesser scores
+  if (calcScore >= 4 && calcScore < 7) {
+    showScore = showScore + "&nbsp; Nearly There, Just a Tiny Bit More of Practice Needed :) "
   };
-  
-  if (calcScore <=3) {
-    showScore = showScore + "&nbsp; <strong> Nice Try, But There Is Room For Improvment.. </strong>";
+  if (calcScore <= 3 && calcScore > 0) {
+    showScore = showScore + "&nbsp; Nice Try, But There Is Room For Improvment.. ";
   }
-
+  if (calcScore === 0) {
+    showScore = showScore + "&nbsp; Just a Bad Day in The Office..Click on ReLoad and Try Again? ";
+  }
 
   document.getElementById('userScore').innerHTML = showScore;
 }
 
 
-//what is below about..shows Uncaught ReferenceError: $ is not defined    at script.js for document (in developer tools)
- 
-$(document).ready(function() {
-  $('#submitButton').click(function() {
-		$(this).addClass('hide');
-	});
+$(document).ready(function () {
+  $('#submitButton').click(function () {
+    $(this).addClass('hide');
+  });
 });
 
-
-// *--------------------------------1. load when page loads, gets question 0
-/*window.addEventListener("load", function () {
-
-    /*var question = document.getElementById("question1");
-     question.innerHTML = translations[0]["question"];
-
-    var answer11 = document.getElementById('qa1');
-     answer11.innerText = translations[0]["original"][0];
-
-     var answer12 = document.getElementById('qa2');
-     answer12.innerText = translations[0]["original"][1];
-
-
-     var answer13 = document.getElementById('qa3');
-     answer13.innerText = translations[0]["original"][2];*/
-    

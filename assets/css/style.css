@@ -13,6 +13,11 @@ body {}
   padding:10px 0
 }
 
+label {
+  font-weight: bolder;
+  color: darkolivegreen;
+}
+
 #submitButton {
   border-radius: 3px;
   background-color: coral;
@@ -25,7 +30,7 @@ body {}
   color: indigo;
   font-weight: bold;
   font-size: 1.5rem;
-  background-color:lightseagreen;
+  background-color:transparent;
 }
 
 #reload {
@@ -44,6 +49,16 @@ body {}
   background-color:lightseagreen;
 }
 
+#scores-area {
+  background-color: darkslategray;
+  color: coral;
+  padding:10px;
+  }
+
+  #userScore {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
 
 .jumbotron {
   background-color: goldenrod;
