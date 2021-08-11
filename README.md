@@ -98,12 +98,12 @@ Footer segment with clickable email to get in touch
 *The site is designed for people looking to test their knowledge of basic Spanish Nouns.
 
 **Users:**
-* As a user, I'd like to easily see what the page is about on loading it initially.
+* As a user, I'd like to easily see what the page is about on loading it initially;
 * As a user, I'd like to see variety of questions listed in an uncluttered and easily readable way;
 * As a user, being a beginner, I would like to have options of answers, which would help me to juggle my memory;
-* As a user, I'd like to see the result of how well I have done, on submitting my answers to the quiz.
-* As a user, I'd like to be able reload a page and try again, to see if i can do any better;
-* As a user, I'd like to be able to contact the site owners if i think any naswers are incorrect or have other sufggestions/queries.
+* As a user, I'd like to see the result of how well I have done, on submitting my answers to the quiz;
+* As a user, I'd like to be able reload a page and try again, to see if I can do any better;
+* As a user, I'd like to be able to contact the site owners if I think any naswers are incorrect or have other suggestions/queries.
 
 **Site Owner:**
 * The site owner's main goal is that the user has a great experience and has fun;
@@ -127,11 +127,13 @@ I have tested the site on a number of occasions throughout the building process,
 During this testing I realised that I had to make some design changes to areas that I was not entirely happy with, and I made a number of changes to the page layouts, the colour schemes and fonts used. 
 I have changed and added different buttons throughout the process, in the end settling in for just a couple main ones, that offer an option of submitting and reloading.
 
+The css validator was intitally throwing a number ofw errors and warnings relating to bootsrap.css file i had redferenced. I have since removed it and made few adjusments on my own css cose which seems to have solved the issue.
+
 The biggest challenge was to add relevant functions to make site interactive, but that did not required too compliacted script.
 I have settled for listing the questions and answers in html (original idea was to have an array in script and get them pulled out, but i just couldnt make it to work).
 Then the correct answers are shown by using function for HTML ID's elements inner html.
 I have used IF query for displaying answers to the questions that have aonly been answerd incorrectly (or not answer at all) as well as for displaying different result messages on submission.
-I have also used FOR loop for calculating total score possible
+I have also used FOR loop for calculating total score possible.
 
 W3C Markup Validation Service, the CSS Validation Service and the JSHint Javascript Validator were used for testing my codes..
 There were some syntax mistakes, missed characters etc, that have been updated.
@@ -142,15 +144,12 @@ HTML:
 ![GitHub Responsive](assets/images/p2SC7.jpg)
 
 CSS:
+![GitHub Responsive](assets/images/p2SC8.jpg)
+
 
 JavaScript:
 This displayed a couple of warnings. I have looked at anumber of resources to see if i can find a way to get these warnings solved, but so far couldnt. AS the site is still working and no erros were shown, i have left script as it is for now.
 ![GitHub Responsive](assets/images/p2SC9.jpg)
-*****
-*****
-*****
-
-
 
 
 *Changes I would like to add:*
@@ -158,18 +157,17 @@ This displayed a couple of warnings. I have looked at anumber of resources to se
 * Adding a 'bank' of different questions with possible naswers, that can be drawn randomly on re-load ad are not the same each time.
 
 **As a User I was able to:**
-* See contact information clearly either straight away at the bottom of page or by scrolling down on smaller devices 
-* Be taken to the product page by clicking on central button in Home page
-* See images of products and click on 'Order' link from Cakes page
-* Get basic information about business ethos from AboutUs page accesible from top nav bar
-* Access company's social media accounts from footer on each page.
-* Contact business by email or phone by clicking a relevant field in footer and not having to type text/numbers in.
-* Forward order and any comments/enquiries by clicking on Order tab in Nav Links and filling Order form.
+* See what the page is about on loading it initially;
+* See all questions listed in an uncluttered and easily readable way;
+* Have optins for answrs to each question;
+* See my test result straight away on pressing submit button;
+* To reload a page and try again, to see if I can do any better;
+* ACould contact the site owners via clickable email link at the footer of the page.
 
 
 ---
 ## 8. Deployment
-This website has been deployed to GitHub Pages .
+This website has been deployed to GitHub Pages.
 
 It was deployed ahead of time and modified on a number of occasions so that I would be able to check how things worked on different devices, and to ask others to test it themselves.
 
@@ -189,28 +187,29 @@ The process for deployment is documented below:
 **Languages and Frameworks**
 * HTML
 * CSS
+* JavaScript
 
 **Tools Used**
 * Balsamiq: for creating wireframes
 * Github and Gitpod: for creating and editing code
-* Font Awesome: used for icons
-* Google Fonts: Quicksand and Roboto fonts imported from google fonts
 * Responsive Viewer: a google chrome extension used to test site at different screen sizes
 * TinyPNG used to compress images
 * W3C Validator used to validate HTML code
 * CSS Validator used for checking CSS code
+* JSHint Javascript for checking script
 * Am I Responsive used for showing site views for different screen sizes
-* Bootstrap for Jumbotron used on Index page
 
 ---
 
 ## Acknowledgments and Thanks
 * Massive thank you to Felipe Alarcon for all the support, advise, ideas and feedback.
 * David Walsh Blog for reset css
-* Pure CSS for styling Header navigation links
+* JQuerry developers
+* codepen.io for script ideas
+* w3schools
 * MarkdwonGuide
 * Stack Overload
-* Unsplash and BirzuDuona for images
+* Unsplash for images
 * Google
 
 ---
