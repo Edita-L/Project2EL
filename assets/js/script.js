@@ -9,12 +9,11 @@ function submitQuiz() {
       if (radiosNo[i].checked) {
         var answerValue = Number(radiosNo[i].value);
       }
+      // changes non-clicked answers to zero
+      if (isNaN(answerValue)) {
+        answerValue = 0;
+      }
     }
-    // change not clicked answers to zero
-    if (isNaN(answerValue)) {
-      answerValue = 0;
-    }
-
     return answerValue;
   }
 
@@ -73,15 +72,15 @@ function submitQuiz() {
 
   // show score as score/out of possible score
   var showScore = "Your Score: " + calcScore + "/" + questionCounter;
-  
+
   // message for full score
   if (calcScore === questionCounter) {
     showScore = showScore + "&nbsp; <strong>Amazing - You Got a Perfect Score!</strong>";
-  };
+  }
   // messages for lesser scores
   if (calcScore >= 4 && calcScore < 7) {
-    showScore = showScore + "&nbsp; Nearly There, Just a Tiny Bit More of Practice Needed :) "
-  };
+    showScore = showScore + "&nbsp; Nearly There, Just a Tiny Bit More of Practice Needed :) ";
+  }
   if (calcScore <= 3 && calcScore > 0) {
     showScore = showScore + "&nbsp; Nice Try, But There Is Room For Improvment.. ";
   }
@@ -98,4 +97,3 @@ $(document).ready(function () {
     $(this).addClass('hide');
   });
 });
-

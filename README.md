@@ -46,6 +46,7 @@ The total score gives an indication of fraction of correct answers versus the to
 
 The wireframe was designed using Balsamiq.
 It has a basic intial structure, which remained throughout the project, with the styling slightly changed/enchanced for better viewing experience.
+The styiling remains the same through all devices, with header only resizing slightly for mobiles.
 
 Below is a link to all my wireframes:
 ## ![My Wireframes](pdfs/WireframeTYS.pdf)
@@ -71,13 +72,24 @@ Below is a link to all my wireframes:
  ## 5. Site Overview
 
  Images below show overview of the site:
+
+ The header message and start of questions:
+
  ![GitHub Responsive](assets/images/p2SC1.jpg)
 
+
+Main body with questions and answer options
  ![GitHub Responsive](assets/images/p2SC2.jpg)
 
+End of quiz- option to Submit and then Restart if wished
  ![GitHub Responsive](assets/images/p2SC3.jpg)
 
+Summary message on displaying test results
  ![GitHub Responsive](assets/images/p2SC4.jpg)
+
+Footer segment with clickable email to get in touch
+![GitHub Responsive](assets/images/p2SC5.jpg)
+
 
 ---
 
@@ -93,41 +105,57 @@ Below is a link to all my wireframes:
 * As a user, I'd like to be able reload a page and try again, to see if i can do any better;
 * As a user, I'd like to be able to contact the site owners if i think any naswers are incorrect or have other sufggestions/queries.
 
-
+**Site Owner:**
+* The site owner's main goal is that the user has a great experience and has fun;
+* The site owner wants the navigation through the site to be clear and easy;
+* The site owner wants all the necessary information for the user to complete the quiz to be readily accessible and easy to understand;
+* The site owner wants the visuals of the quiz to be appealling and for the colours and design of the site to draw the user in;
+* The site owner wants the user to have a clear summarising message once the game is finished;
+* The site owner wants to make it straightforward for the user to restart the quiz when desired.
 ---
 
 ## 7. Testing & Code Validation
 
-************
-*************
+
 My website has been tested through the GTMetrix site,   
 [GTmetrix](https://gtmetrix.com "GTmetrix Homepage")
 Below is a screenshot of the results achieved, with performance and structure graded A by GTmetrix.
 
-![GitHub Responsive](assets/images/gtmetrix-el.jpg)
+![GitHub Responsive](assets/images/p2SC6.jpg)
 
 I have tested the site on a number of occasions throughout the building process, so that I could see it from different devices such as my mobile, tablet and PC and check for responsiveness.
+During this testing I realised that I had to make some design changes to areas that I was not entirely happy with, and I made a number of changes to the page layouts, the colour schemes and fonts used. 
+I have changed and added different buttons throughout the process, in the end settling in for just a couple main ones, that offer an option of submitting and reloading.
 
-The site was tested on CSS and HTML Validator sites. There were some syntax mistakes, missed characters etc, that have been updated.
+The biggest challenge was to add relevant functions to make site interactive, but that did not required too compliacted script.
+I have settled for listing the questions and answers in html (original idea was to have an array in script and get them pulled out, but i just couldnt make it to work).
+Then the correct answers are shown by using function for HTML ID's elements inner html.
+I have used IF query for displaying answers to the questions that have aonly been answerd incorrectly (or not answer at all) as well as for displaying different result messages on submission.
+I have also used FOR loop for calculating total score possible
 
-### **Issues and Changes Implemented**
+W3C Markup Validation Service, the CSS Validation Service and the JSHint Javascript Validator were used for testing my codes..
+There were some syntax mistakes, missed characters etc, that have been updated.
 
-During this testing I realised that I had to make some design changes to areas that I was not satisfied with, to make it more easy to navigate, user firendly and improve the viewing experience on the mobile devices.
-I have therefore made many changes as I went along in order to make it more responsive or easier to navigate. Some of these changes are listed below:
-* Initially Index Page had just navigation link listed at the top and hero image, followed by footer. I have added the central To Cakes call of action button to make it easier to reach the product page.
-* The Header was not responsive enough on mobile devices so I have used pure CSS code to make nav bar more responsive.
-* The Header components were aligned to the sides of the screen to start with, but were centered to make it more appealing from UX point of view.
-* The Index page background image and call of action button were initially set as separate divs and would overlap when tested on different screen sizes. This was overcome by using bootstrap jumbotron.
-* The footer was changed from original p style into unordered list to make it more readable on different devices.
-* The Order section was found to not fit into smaller screens properly, adding some padding have corrected it.
-* Some of the background colors (on Index and Order pages) have needed adjusting to make the text displayed over them more easy to read.
-* While testing I realised few links were not working where I have mistyped addresses, those were rectified.
-* About Us page sections where not aligning properly on different size screens, I have added a flex grid to overcome that issue. It has also appeared to have too long paragraphs to keep visitor interested, which were concentrated and shortened since.
-* Having noticed that images overstretch horizontally on larger screens, max-width has been added to each page main section to resolve this.
+The screenshots of testing can be found below:
 
-*Changes I would still like to add:*
-* *Setting buttons on Cakes page to be at the same line of viewing. I have tried different styling and html structures but havent managed yet to achieve it.*
-* *Improving Order Form, to have an option of adding things to basket, continue to the payment page etc.*
+HTML:
+![GitHub Responsive](assets/images/p2SC7.jpg)
+
+CSS:
+
+JavaScript:
+This displayed a couple of warnings. I have looked at anumber of resources to see if i can find a way to get these warnings solved, but so far couldnt. AS the site is still working and no erros were shown, i have left script as it is for now.
+![GitHub Responsive](assets/images/p2SC9.jpg)
+*****
+*****
+*****
+
+
+
+
+*Changes I would like to add:*
+* I would like to find a way for displaying one question at a time, perhaps with relavnt background image for each;
+* Adding a 'bank' of different questions with possible naswers, that can be drawn randomly on re-load ad are not the same each time.
 
 **As a User I was able to:**
 * See contact information clearly either straight away at the bottom of page or by scrolling down on smaller devices 
@@ -138,8 +166,25 @@ I have therefore made many changes as I went along in order to make it more resp
 * Contact business by email or phone by clicking a relevant field in footer and not having to type text/numbers in.
 * Forward order and any comments/enquiries by clicking on Order tab in Nav Links and filling Order form.
 
+
 ---
-## Deployment
+## 8. Deployment
+This website has been deployed to GitHub Pages .
+
+It was deployed ahead of time and modified on a number of occasions so that I would be able to check how things worked on different devices, and to ask others to test it themselves.
+
+The process for deployment is documented below:
+
+* Log into GitHub;
+* Access the page with the repository for this project (https://github.com/Edita-L/Project2EL);
+* Click on 'Settings' on the main menu over the file listing;
+* Navigate down to 'GitHub Pages' and click on Dedicated Tab;
+* Select 'Branch: Main' from the menu;
+* This generates a live link for the website, which is now viewable publicly:
+![GitHub Responsive](assets/images/p2SC10.jpg)
+
+
+
 ## Technologies
 **Languages and Frameworks**
 * HTML

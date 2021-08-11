@@ -25,8 +25,13 @@ body {}
 
 }
 
+.corrects {
+  font-size: 1.1rem;
+  background-color: coral;
+}
 
-@media screen and (max-width: 360px) {
+
+@media screen and (max-width: 390px) {
   .flag {
     padding: 0;
   }
@@ -34,13 +39,19 @@ body {}
    opacity:0.8;
   }
   .heading > p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
-}
+  .corrects {
+    font-size: 0.8rem;
+  }
+  #scores-area {
+    font-size: 0.8rem;
+  }
+  }
 
 label {
   font-weight: bolder;
-  color: darkolivegreen;
+  color: rgb(58, 85, 12);
 }
 
 #submitButton {
@@ -90,7 +101,6 @@ label {
   background-color: goldenrod;
   color: darkslategrey;
   padding: 0 10px;
-
 
 }
 
