@@ -1,5 +1,9 @@
 body {}
 
+.text-center {
+  text-align: center !important;
+}
+
 .flag {
   width: 100%;
   margin: 0 auto;
@@ -30,24 +34,34 @@ body {}
   background-color: coral;
 }
 
+.quizAnswers {
+  font-size: 1.2rem;
+}
 
 @media screen and (max-width: 390px) {
   .flag {
     padding: 0;
   }
+
   .heading {
-   opacity:0.8;
+    opacity: 0.8;
   }
-  .heading > p {
+
+  .heading>p {
     font-size: 1.1rem;
   }
+
   .corrects {
     font-size: 0.8rem;
   }
+
   #scores-area {
     font-size: 0.8rem;
   }
+  .quizAnswers {
+    font-size: 0.8rem;
   }
+}
 
 label {
   font-weight: bolder;
@@ -100,7 +114,9 @@ label {
 .jumbotron {
   background-color: goldenrod;
   color: darkslategrey;
-  padding: 0 10px;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: .3rem;
 
 }
 
@@ -129,6 +145,7 @@ label {
 
 li {
   list-style: none;
+  padding:10px;
 }
 
 table {
