@@ -17,7 +17,7 @@ function submitQuiz() {
     return answerValue;
   }
 
-  // calc score with answerScore function
+  // calc total received score with answerScore function
   var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4') + answerScore('q5') + answerScore('q6') + answerScore('q7') + answerScore('q8') + answerScore('q9') + answerScore('q10'));
   console.log("CalcScore: " + calcScore);
 
@@ -61,7 +61,6 @@ function submitQuiz() {
     document.getElementById('correctAnswer10').innerHTML = correctAnswer('correctString10', 10);
   }
 
-
   // calculate total possible score
   var questionCountArray = document.getElementsByClassName('question');
 
@@ -70,14 +69,14 @@ function submitQuiz() {
     questionCounter++;
   }
 
-  // show score as score/out of possible score
+  // show score as received score/out of possible score
   var showScore = "Your Score: " + calcScore + "/" + questionCounter;
 
-  // message for full score
+  // message if full score
   if (calcScore === questionCounter) {
     showScore = showScore + "&nbsp; <strong>Amazing - You Got a Perfect Score!</strong>";
   }
-  // messages for lesser scores
+  // messages if lesser scores
   if (calcScore >= 4 && calcScore < 7) {
     showScore = showScore + "&nbsp; Nearly There, Just a Tiny Bit More of Practice Needed :) ";
   }
